@@ -11,6 +11,7 @@ mailer:latest
 matrix-project:latest
 script-security:latest
 ssh-credentials:latest
+structs:latest
 token-macro:latest
 
 git:latest
