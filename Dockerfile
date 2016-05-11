@@ -12,6 +12,10 @@ RUN /usr/local/bin/plugins.sh /var/jenkins_home/plugins.txt
 COPY config/* /usr/share/jenkins/ref/
 # COPY config/.m2/settings.xml /var/jenkins_home/.m2/settings.xml
 
+# Add Docker client certificate for authentication
+USER jenkins
+COPY ssl/* $JENKINS_HOME/.docker/
+
 # Install Docker.
 USER root
 RUN apt-get update && apt-get install -y apt-utils apt-transport-https ca-certificates && rm -rf /var/lib/apt/lists/*
@@ -19,4 +23,5 @@ RUN apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 581
 RUN echo 'deb https://apt.dockerproject.org/repo debian-jessie main' >> /etc/apt/sources.list.d/docker.list
 RUN apt-get update && apt-get install -y docker-engine && rm -rf /var/lib/apt/lists/*
 RUN service docker start
-USER ${user}
+
+USER jenkins
