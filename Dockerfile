@@ -6,7 +6,7 @@ COPY plugins.txt /usr/share/jenkins/ref/plugins.txt
 RUN /usr/local/bin/plugins.sh /usr/share/jenkins/ref/plugins.txt
 
 # Adding default Jenkins Jobs
-# COPY jobs/GitHub-seed-job.xml /usr/share/jenkins/ref/jobs/GitHub-seed-job/config.xml
+COPY jobs/Blue-Sharp.xml /usr/share/jenkins/ref/jobs/Blue-Sharp/config.xml
 
 # Jenkins settings
 COPY config/* /usr/share/jenkins/ref/
