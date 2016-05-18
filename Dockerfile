@@ -1,4 +1,4 @@
-FROM jenkins:latest
+FROM jenkins:2.3
 MAINTAINER Rafael Kansy <rafael.kansy@blue-sharp.de>
 
 USER jenkins
