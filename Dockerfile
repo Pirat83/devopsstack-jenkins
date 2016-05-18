@@ -2,19 +2,19 @@ FROM jenkins:latest
 MAINTAINER Rafael Kansy <rafael.kansy@blue-sharp.de>
 
 USER jenkins
-COPY plugins.txt /var/jenkins_home/plugins.txt
-RUN /usr/local/bin/plugins.sh /var/jenkins_home/plugins.txt
+COPY plugins.txt /usr/share/jenkins/ref/plugins.txt
+RUN /usr/local/bin/plugins.sh /usr/share/jenkins/ref/plugins.txt
 
 # Adding default Jenkins Jobs
 # COPY jobs/GitHub-seed-job.xml /usr/share/jenkins/ref/jobs/GitHub-seed-job/config.xml
 
 # Jenkins settings
 COPY config/* /usr/share/jenkins/ref/
-# COPY config/.m2/settings.xml /var/jenkins_home/.m2/settings.xml
+COPY config/.m2/settings.xml /usr/share/jenkins/ref/.m2/settings.xml
 
 # Add Docker client certificate for authentication
 USER jenkins
-COPY ssl/* $JENKINS_HOME/.docker/
+COPY ssl/* /usr/share/jenkins/ref/.docker/
 
 # Install Docker.
 USER root
