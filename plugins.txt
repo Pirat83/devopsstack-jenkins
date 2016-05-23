@@ -12,6 +12,7 @@ cvs:latest
 dashboard-view:latest
 docker-build-publish:latest
 docker-commons:latest
+docker-workflow:latest
 dry:latest
 durable-task:latest
 external-monitor-job:latest
