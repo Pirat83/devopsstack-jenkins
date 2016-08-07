@@ -25,6 +25,7 @@ github-branch-source:latest
 github-organization-folder:latest
 git-server:latest
 handlebars:latest
+htmlpublisher
 icon-shim:latest
 jacoco:latest
 javadoc:latest
