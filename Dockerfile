@@ -1,4 +1,4 @@
-FROM jenkins:2.3
+FROM jenkins:latest
 MAINTAINER Rafael Kansy <rafael.kansy@blue-sharp.de>
 
 USER jenkins
@@ -25,3 +25,4 @@ RUN apt-get update && apt-get install -y docker-engine && rm -rf /var/lib/apt/li
 RUN service docker start
 
 USER jenkins
+ENV JENKINS_OPTS --prefix=/jenkins
