@@ -3,7 +3,7 @@
   <installations>
     <hudson.plugins.sonar.SonarInstallation>
       <name>SonarQube Version 5.5</name>
-      <serverUrl>http://sonar:9000</serverUrl>
+      <serverUrl>http://rproxy/sonar/</serverUrl>
       <serverVersion>5.3</serverVersion>
       <serverAuthenticationToken></serverAuthenticationToken>
       <mojoVersion></mojoVersion>
