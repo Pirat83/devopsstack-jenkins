@@ -22,7 +22,7 @@ RUN apt-get update && apt-get install -y apt-utils apt-transport-https ca-certif
 RUN apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D
 RUN echo 'deb https://apt.dockerproject.org/repo debian-jessie main' >> /etc/apt/sources.list.d/docker.list
 RUN apt-get update && apt-get install -y docker-engine && rm -rf /var/lib/apt/lists/*
-RUN service docker start
+#RUN systemctl start docker
 
 USER jenkins
 ENV JENKINS_OPTS --prefix=/jenkins
