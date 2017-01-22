@@ -1,6 +1,7 @@
 ace-editor:latest
 analysis-collector:latest
 analysis-core:latest
+ansicolor:latest
 ant:latest
 antisamy-markup-formatter:latest
 authentication-tokens:latest
