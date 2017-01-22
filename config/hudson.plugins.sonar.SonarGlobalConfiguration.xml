@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<hudson.plugins.sonar.SonarGlobalConfiguration plugin="sonar@2.4.1">
+<hudson.plugins.sonar.SonarGlobalConfiguration plugin="sonar@2.5">
   <installations>
     <hudson.plugins.sonar.SonarInstallation>
-      <name>SonarQube Version 5.5</name>
+      <name>SonarQube Version 6.2</name>
       <serverUrl>http://rproxy/sonar/</serverUrl>
       <serverVersion>5.3</serverVersion>
       <serverAuthenticationToken></serverAuthenticationToken>
@@ -17,8 +17,8 @@
         <envVar></envVar>
       </triggers>
       <sonarLogin></sonarLogin>
-      <databaseSecret>14sgGfcYGD+U0ryrCjFvag==</databaseSecret>
-      <sonarSecret>14sgGfcYGD+U0ryrCjFvag==</sonarSecret>
+      <databaseSecret>bmhov1NfM8QLPklYdXST7g==</databaseSecret>
+      <sonarSecret>bmhov1NfM8QLPklYdXST7g==</sonarSecret>
     </hudson.plugins.sonar.SonarInstallation>
   </installations>
   <buildWrapperEnabled>true</buildWrapperEnabled>

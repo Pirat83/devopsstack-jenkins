@@ -1,13 +1,13 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<hudson.plugins.sonar.SonarRunnerInstallation_-DescriptorImpl plugin="sonar@2.4.1">
+<hudson.plugins.sonar.SonarRunnerInstallation_-DescriptorImpl plugin="sonar@2.5">
   <installations>
     <hudson.plugins.sonar.SonarRunnerInstallation>
-      <name>SonarQube Runner 2.6.1</name>
+      <name>SonarQube Scanner 2.8</name>
       <properties>
         <hudson.tools.InstallSourceProperty>
           <installers>
             <hudson.plugins.sonar.SonarRunnerInstaller>
-              <id>2.6.1</id>
+              <id>2.8</id>
             </hudson.plugins.sonar.SonarRunnerInstaller>
           </installers>
         </hudson.tools.InstallSourceProperty>
