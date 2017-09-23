@@ -1,4 +1,4 @@
-FROM jenkins:latest
+FROM jenkins/jenkins:lts
 MAINTAINER Rafael Kansy <rafael.kansy@blue-sharp.de>
 
 # Install Docker.
@@ -13,13 +13,9 @@ RUN apt-get update && apt-get install -y docker-ce && rm -rf /var/lib/apt/lists/
 USER jenkins
 # Jenkins settings
 COPY config/* /usr/share/jenkins/ref/
-COPY config/.m2/settings.xml /usr/share/jenkins/ref/.m2/settings.xml
 # Adding default Jenkins Jobs
 COPY jobs/Blue-Sharp.xml /usr/share/jenkins/ref/jobs/Blue-Sharp/config.xml
-# Add Docker client certificate for authentication
-COPY ssl/* /usr/share/jenkins/ref/.docker/
 # Add plugins
 COPY plugins.txt /usr/share/jenkins/ref/plugins.txt
-RUN /usr/local/bin/install-plugins.sh $(cat /usr/share/jenkins/ref/plugins.txt | tr '\n' ' ')
-
-ENV JENKINS_OPTS --prefix=/jenkins
+RUN /usr/local/bin/install-plugins.sh < /usr/share/jenkins/ref/plugins.txt
+#ENV JENKINS_OPTS --prefix=/jenkins

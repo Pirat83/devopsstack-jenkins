@@ -1,4 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<hudson.plugins.sonar.SonarPublisher_-DescriptorImpl plugin="sonar@2.4">
-  <buildWrapperEnabled>false</buildWrapperEnabled>
-</hudson.plugins.sonar.SonarPublisher_-DescriptorImpl>

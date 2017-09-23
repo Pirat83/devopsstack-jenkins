@@ -11,3 +11,7 @@ gen
 
 # SSL certificates
 *.pem
+
+ssl
+maven
+users
