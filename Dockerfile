@@ -12,7 +12,10 @@ RUN apt-get update && apt-get install -y docker-ce && rm -rf /var/lib/apt/lists/
 
 USER jenkins
 # Jenkins settings
-COPY config/* /usr/share/jenkins/ref/
+COPY config/.m2/*.xml /usr/share/jenkins/ref/.m2/
+COPY config/*.xml /usr/share/jenkins/ref/
+COPY config/jenkins.install.UpgradeWizard.state /usr/share/jenkins/ref/
+
 # Adding default Jenkins Jobs
 COPY jobs/Blue-Sharp.xml /usr/share/jenkins/ref/jobs/Blue-Sharp/config.xml
 # Add plugins

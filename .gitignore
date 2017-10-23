@@ -13,5 +13,6 @@ gen
 *.pem
 
 ssl
-maven
 users
+/config/.m2/settings.xml
+/config/.m2/settings-security.xml
